@@ -1,0 +1,11 @@
+<h1>HERE ARE THE QUESTIONS</h1>
+
+<%= link_to "add", new_user_question_path(@user, @question) %>
+
+
+<div class="display">
+<% @questions.each do |question| %>
+	<%= render 'question', :question => question %>
+	<%= link_to "edit", edit_user_question_path(@user, question) %>
+	<%= link_to "delete", user_question_path(@user, question), :method => :delete %>
+<% end %>

@@ -12,7 +12,5 @@ Rails.application.routes.draw do
     resources :responses, name_prefix: "answer_"
   end
 
-
-
-  root 'questions#show'
+  root 'questions#index'
 end
