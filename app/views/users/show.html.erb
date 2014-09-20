@@ -1,0 +1,34 @@
+<div class="username"><h1><%= @user.username %></h1></div>
+
+
+<h2>QUESTIONS SUBMITTED</h2>
+<% count = 1 %>
+<% @user.questions.each do |q| %>
+	<div class="question">
+		<%= count %>. <strong><%= q.title %></strong><br>
+		<%= q.body %><br>
+		<% count += 1 %>
+	</div>
+<% end %>
+
+
+<h2>ANSWERS</h2>
+<% count = 1 %>
+<% @user.answers.each do |a| %>
+  <div class="answer">
+		<%="#{count}. #{a.body} "%><br>
+		<% count += 1 %>
+	</div>
+<% end %>
+
+
+
+<h2>COMMENTS</h2>
+<% count = 1 %>
+<% @user.responses.each do |r| %>
+	<div class="comment">
+	<%="#{count}. #{r.body} "%><br>
+	<% count += 1 %>
+	</div>
+<% end %>
+
