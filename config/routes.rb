@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
 
 
-  root 'questions#show'
+  root 'responses#index'
 end
