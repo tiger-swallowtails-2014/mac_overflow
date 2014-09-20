@@ -30,6 +30,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 group :development do
   gem 'spring'
   gem 'rails_db_info'
+  gem 'faker'
 end
 
 gem 'pg'
