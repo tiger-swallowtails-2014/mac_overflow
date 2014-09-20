@@ -9,14 +9,13 @@ class QuestionsController < ActionController::Base
 
 	def new
 		@question = @user.questions.new
-		# @question = Question.new
 	end
 
 
 	def create
-		@question = @user.question.new(title: params[:question][:title], body: params[:question][:body])
+		@question = @user.questions.new(title: params[:question][:title], body: params[:question][:body])
 		if @question.save
-			redirect_to	root_path
+			redirect_to	user_question_path(@user, @question)
 		else
 			@questions = Question.all
 			render :index
@@ -24,30 +23,25 @@ class QuestionsController < ActionController::Base
 	end
 
 	def show
-		# @question = User.questions.find(params[:id])
+		@question = @user.questions.find(params[:id])
 	end
 
 	def edit
-		# @question = User.questions.find(params[:id])
-		render :edit
+		@question = @user.questions.find(params[:id])
 	end
 
 	def update
-		# @question = Question.find(params[:id])
 		@question = @user.questions.find(params[:id])
 		if @question.update_attributes(question_params)
-			redirect_to root_path
+			redirect_to user_question_path(@user, @question)
 		else
 			render :edit
 		end
 	end
 
 	def destroy
-		@question = Question.find(params[:id])
-		p @question
-		# @question = @user.questions.find(params[:question][:id])
-		# @question.destroy
-		redirect_to root_path
+		@question = @user.questions.find(params[:id]).destroy
+		redirect_to user_questions_path(@user)
 	end
 
 	private

@@ -7,5 +7,5 @@
 <% @questions.each do |question| %>
 	<%= render 'question', :question => question %>
 	<%= link_to "edit", edit_user_question_path(@user, question) %>
-	<%= button_to "delete", user_question_path(@user, question), :method => :delete %>
+	<%= link_to "delete", user_question_path(@user, question), :method => :delete %>
 <% end %>
