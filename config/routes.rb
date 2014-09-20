@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'users#index'
+
   resources :users do
     resources :questions, name_prefix: "user_"
   end
@@ -13,6 +15,4 @@ Rails.application.routes.draw do
   end
 
 
-
-  root 'questions#index'
 end
