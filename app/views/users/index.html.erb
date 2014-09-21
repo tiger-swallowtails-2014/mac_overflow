@@ -2,14 +2,13 @@
   <div class="form_container">
       <h1>Mac_Overflow</h1>
 
-      <%= button_to "Sign Up", id:"signup", remote: true%>
-      <%= button_to "Log In", id:"login", remote: true%>
-      <!-- USE JS TO REVEAL EACH FORM -->
- 
+      <%= link_to "Sign Up", "#", remote: true, id:"signup"%>
+      <%= link_to "Log In", "#", remote: true, id:"login"%>
+  
     </div><br>
 
-  <div class="signup">
-
+  <div class="signup" style="display: none;">
+  <h2>SIGN UP</h2>
     <%=form_for :user, url: users_path do |f| %>
       Username: <%= f.text_field :username %>
       Password: <%= f.password_field :password  %>
@@ -18,10 +17,11 @@
   </div>
 
 
-   <div class="login">
-    <%=form_for :user do |f| %>
-      Username: <%= f.text_field :username %>
-      Password: <%= f.password_field :password  %>
-      <%= f.submit %>
-    <%end %>
+<div class="login" style="display: none;">
+   <h2>LOG IN</h2>
+    <%=form_tag(:action => user_path) do %>
+      Username: <%= text_field_tag(:username) %>
+      Password: <%= password_field_tag(:password)  %>
+      <%= submit_tag("Log In") %>
+      <% end %>
   </div>
