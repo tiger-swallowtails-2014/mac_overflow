@@ -14,5 +14,8 @@ Rails.application.routes.draw do
     resources :responses, name_prefix: "answer_"
   end
 
+  get '/answers/:id/upvote', to: "answers#upvote", as: "upvote_answer"
+  get '/answers/:id/downvote', to: "answers#downvote", as: "downvote_answer"
 
+  root 'questions#index'
 end
