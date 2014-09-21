@@ -6,6 +6,15 @@
 <h3>Answers: <%= @answers.size %></h3>
 <hr>
 
-<%= render 'answers' %>
+<% @answers.each do |answer| %>
+<div class="answers_container">
+  <p><img class="vote_arrow" src="http://www.iconsdb.com/icons/download/black/arrow-206-512.gif"><b>Answer:</b>  <%= answer.body %></p>
+  <p>Vote Count:  <%= answer.votes.size %></p>
+  <% answer.responses.each do |response| %>
+  <p><b>Response:</b>  <%= response.body %></p>
+  <% end %>
+</div>
+<hr>
+<% end %>
 
 <%= render 'answer_form' %>
