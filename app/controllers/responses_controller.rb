@@ -9,6 +9,14 @@ class ResponsesController < ApplicationController
 	end
 
 	def create 
-		p params 
+		@response = Response.new(response_params)
+
+		render nothing: true 
+
+	end
+
+	private 
+	def response_params
+		params.require(:response).permit(:body)
 	end
 end
