@@ -5,7 +5,7 @@ $(document).on('page:load', function() {
     $('.answer_container').on('click', '.vote', voteAjax)
   }
 
-  var voteAjax = function(event) {
+  var voteAjax = function() {
     event.preventDefault();
     var button = $(this);
     console.log("clicked")

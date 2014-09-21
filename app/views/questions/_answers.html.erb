@@ -1,8 +1,12 @@
+<hr>
 <% @answers.each do |answer| %>
-<div class="answer_container">
+<div class="answer_container" id=<%= answer.id %>>
   <p><b>Answer:</b>  <%= answer.body %></p>
 
   <p><a class="vote" href="/answers/<%= answer.id %>/upvote">up</a>  <a class="vote" href="/answers/<%= answer.id %>/downvote">down</a>  |  Vote Count:  <span class="vote_count"><%= answer.votes.size %></span></p>
+
+<div class="responselink"><%= link_to "Respond", new_answer_response_path(@question), remote: true, class: 
+  	"#{answer.id}" %> </div> 
 
   <% answer.responses.each do |response| %>
   <div class="response_container"></div>
