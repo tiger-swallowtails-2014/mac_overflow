@@ -19,9 +19,9 @@
 
 <div class="login" style="display: none;">
    <h2>LOG IN</h2>
-    <%=form_tag(:action => user_path) do %>
-      Username: <%= text_field_tag(:username) %>
-      Password: <%= password_field_tag(:password)  %>
-      <%= submit_tag("Log In") %>
-      <% end %>
+   <%=form_for :session do |f| %>
+      Username: <%= f.text_field :username %>
+      Password: <%= f.password_field :password  %>
+      <%= f.submit %>
+    <%end %>
   </div>
