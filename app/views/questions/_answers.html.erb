@@ -1,0 +1,16 @@
+<% @answers.each do |answer| %>
+<div class="answer_container">
+  <p><b>Answer:</b>  <%= answer.body %></p>
+
+  <p><a class="vote" href="/answers/<%= answer.id %>/upvote">up</a>  <a class="vote" href="/answers/<%= answer.id %>/downvote">down</a>  |  Vote Count:  <span class="vote_count"><%= answer.votes.size %></span></p>
+
+  <% answer.responses.each do |response| %>
+  <div class="response_container"></div>
+    <p><b>Response:</b>  <%= response.body %></p>
+  </div>
+  <% end %>
+
+</div>
+<hr>
+<% end %>
+
