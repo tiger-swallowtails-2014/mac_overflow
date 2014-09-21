@@ -13,6 +13,21 @@ class AnswersController < ApplicationController
 
   end
 
+  def upvote
+    p "clicked"
+    p params
+    @votes = Answer.find(params[:id]).votes
+    @votes.create()
+    render json: @votes.size
+  end
+
+  def downvote
+    @votes = Answer.find(params[:id]).votes
+    @votes.last.destroy
+    render json: @votes.size
+  end
+
+
   private
 
   def get_question
