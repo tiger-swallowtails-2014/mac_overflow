@@ -5,13 +5,26 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 </head>
 <body>
+  <div class="background">
+  </div>
+  <%= render partial: 'layouts/signin' %>
+  <%= render partial: 'layouts/login' %>
   <header class="layout_header">
-    <h1 class="title"><%= link_to "Mac Overflow", root_path %></h1>
+    <% if !current_user %>
+      <a class="nav_links login_link">Login</a>
+      <a class="nav_links signin_link">Sign Up</a>
+    <% else %>
+      <%= link_to "Sign Out", log_out_path, class: "nav_links sign_out" %>
+      <%= link_to 'Profile', user_path(current_user), class: "nav_links sign_out" %>
+    <% end %>
+    <h1 class="title"><%= link_to image_tag("loremlogo.png"), questions_path %></h1>
   </header>
-
-<%= yield %>
+	<div class="content">
+		<%= yield %>
+	</div>
 
 </body>
 </html>

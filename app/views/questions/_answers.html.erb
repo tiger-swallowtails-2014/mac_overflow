@@ -1,16 +1,33 @@
+<hr>
 <% @answers.each do |answer| %>
-<div class="answer_container">
-  <p><b>Answer:</b>  <%= answer.body %></p>
-
-  <p><a class="vote" href="/answers/<%= answer.id %>/upvote">up</a>  <a class="vote" href="/answers/<%= answer.id %>/downvote">down</a>  |  Vote Count:  <span class="vote_count"><%= answer.votes.size %></span></p>
-
-  <% answer.responses.each do |response| %>
-  <div class="response_container"></div>
-    <p><b>Response:</b>  <%= response.body %></p>
-  </div>
+<div class="answer_container" id=<%= answer.id %>>
+  <p>Answer by <% if answer.user %>
+  	<%= link_to answer.user.username, user_path(answer.user.id)%>
+  	<% else %>
+  	Anonymous <br>
   <% end %>
+  <%= answer.created_at.strftime("%b %e, %l:%M %p") %><br><br>  <%= answer.body %></p>
+
+  <p><a class="vote" href="/answers/<%= answer.id %>/upvote">☝︎</a>  <a class="vote" href="/answers/<%= answer.id %>/downvote">☟</a>  |  Vote Count:  <span class="vote_count"><%= answer.votes.size %></span></p>
+
+<div class="responselink <%= answer.id %>"><%= link_to "Respond", new_answer_response_path(answer), remote: true, class: answer.id, style:"font-size: 18px;" %> </div>
+
+	<div class="response_container" id: <%= answer.id %>>
+		<% answer.responses.each do |response| %>
+		<p>Response by
+		<% if response.user  %>
+			<%= link_to response.user.username, user_path(response.user.id)%>
+			<% else %>
+			Anonymous
+			<% end %>
+			<br>
+  <%= response.created_at.strftime("%b %e, %l:%M %p") %><br><br>  <%= response.body %></p>
+  <hr>
+		<% end %>
+	</div>
 
 </div>
 <hr>
 <% end %>
 
+<%= stylesheet_link_tag "app/stylesheets/index.css.scss" %>

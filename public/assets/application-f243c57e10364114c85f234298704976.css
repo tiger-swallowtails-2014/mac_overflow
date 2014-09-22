@@ -1,0 +1,362 @@
+/* line 3, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/forms.css.scss */
+.signup {
+  float: left;
+}
+
+/* line 7, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/forms.css.scss */
+.login {
+  float: right;
+}
+
+/* line 11, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/forms.css.scss */
+.button {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2em;
+  background-image: linear-gradient(#37aaea, #117ed2);
+  box-shadow: inset 0 1px 1px 0 #6FC5F5;
+  padding: 7px 24px;
+  border-radius: 4px;
+}
+
+/* line 21, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/forms.css.scss */
+.new_answer {
+  float: right;
+  position: relative;
+  top: 300px;
+}
+/* line 6, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  color: #333333;
+}
+
+/* line 13, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+.answersheader {
+  text-align: center;
+}
+
+/* line 17, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+.answerform {
+  text-align: center;
+}
+
+/* line 21, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+.questionheader {
+  padding: .5em 2em .5em 2em;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: #333333;
+  line-height: 2em;
+  border: 1px solid #333333;
+}
+
+/* line 31, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+.responselink {
+  padding-left: 3em;
+}
+
+/* line 35, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+.response_container {
+  padding-left: 3em;
+}
+
+/* line 38, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+.form_container {
+  text-align: center;
+  width: 40em;
+  height: 100%;
+  margin-top: 5em;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 18px;
+}
+/* line 47, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+.form_container form {
+  text-align: left;
+}
+/* line 51, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+.form_container a, .form_container .button {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2em;
+  background-image: linear-gradient(#37aaea, #117ed2);
+  box-shadow: inset 0 1px 1px 0 #6FC5F5;
+  padding: 7px 24px;
+  border-radius: 4px;
+}
+/* line 63, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+.form_container #odd {
+  background-color: #F9F9F9;
+}
+
+/* line 69, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/index.css.scss */
+.button {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2em;
+  background-image: linear-gradient(#37aaea, #117ed2);
+  box-shadow: inset 0 1px 1px 0 #6FC5F5;
+  padding: 7px 24px;
+  border-radius: 4px;
+}
+/* line 9, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  background-color: #fafafa;
+}
+
+/* line 17, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+#odd {
+  background-color: #F9F9F9;
+}
+
+/* line 21, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+a {
+  text-decoration: none;
+  color: #0088cc;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+}
+
+/* line 28, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+p {
+  color: #333333;
+  font-size: 20px;
+}
+
+/* line 33, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 37, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.new_question_button {
+  float: right;
+}
+
+/* line 40, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.content {
+  width: 80%;
+  padding: 5em;
+  margin: 5em auto;
+  background-color: white;
+  height: 100%;
+  border-radius: 4px;
+  z-index: 0;
+}
+/* line 49, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.content .question_container {
+  padding: 1em 1em 1em 1em;
+  z-index: 1;
+}
+
+/* line 57, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.layout_header {
+  width: 100%;
+  height: 3em;
+  font-weight: light;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+}
+/* line 66, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.layout_header .title {
+  font-size: 2em;
+  font-weight: 100;
+  margin-top: 0;
+  text-align: center;
+  padding-left: 6em;
+}
+/* line 74, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.layout_header a {
+  text-decoration: none;
+  color: white;
+  margin: 2px 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  transition: color, .5s;
+}
+/* line 82, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.layout_header .nav_links {
+  margin-top: 1%;
+  float: right;
+  margin-right: 3%;
+  cursor: pointer;
+}
+/* line 89, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.layout_header a:hover {
+  color: #0088cc;
+}
+
+/* line 94, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.question_author {
+  float: right;
+  text-align: right;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: light;
+  font-size: 12px;
+}
+
+/* line 102, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.background {
+  margin-top: -2em;
+  width: 100%;
+  height: 51em;
+  background-color: #000;
+  position: fixed;
+  opacity: .9;
+}
+
+/* line 111, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.signin_lightbox, .login_lightbox {
+  position: absolute;
+  margin: 13% 30%;
+  padding: 2em;
+  background-color: #f9fafc;
+  width: 30%;
+  height: 20em;
+  text-align: center;
+}
+/* line 120, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.signin_lightbox label, .login_lightbox label {
+  display: inline-block;
+  clear: left;
+  width: 250px;
+}
+/* line 126, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.signin_lightbox input, .login_lightbox input {
+  display: inline-block;
+  width: 250px;
+  line-height: 2em;
+  font-size: 16px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+}
+/* line 135, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.signin_lightbox p, .login_lightbox p {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+}
+/* line 140, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/layout.css.scss */
+.signin_lightbox .button, .login_lightbox .button {
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(#37aaea, #117ed2);
+  box-shadow: inset 0 1px 1px 0 #6FC5F5;
+  padding: 7px 24px;
+  border-radius: 4px;
+}
+/* line 7, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/show.css.scss */
+body {
+  background-color: #fafafa;
+}
+
+/* line 10, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/show.css.scss */
+.questions {
+  width: 80%;
+  padding: 5em;
+  margin: 5em auto auto 5em;
+  background-color: white;
+  height: 100%;
+  z-index: 0;
+}
+/* line 18, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/show.css.scss */
+.questions .topofquestions {
+  text-align: center;
+  font-size: 40px;
+}
+/* line 22, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/show.css.scss */
+.questions .question_container {
+  padding: 2em 1em 2em 1em;
+  z-index: 1;
+}
+/* line 28, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/show.css.scss */
+.questions a {
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #0088cc;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 3em;
+  z-index: 1;
+}
+/* line 5, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/user_profile.css.scss */
+.username_container {
+  margin-top: -1.8em;
+  font-size: 1.5em;
+  width: 40%;
+  font-weight: light;
+}
+/* line 10, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/user_profile.css.scss */
+.username_container p {
+  font-size: 2em;
+}
+/* line 13, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/user_profile.css.scss */
+.username_container .edit_user_button {
+  font-size: .2em;
+}
+
+/* line 19, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/user_profile.css.scss */
+#accordion {
+  width: 48%;
+  margin-bottom: 13em;
+  margin-top: -1em;
+}
+/* line 24, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/user_profile.css.scss */
+#accordion .accordion_title {
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  background-color: #444444;
+  border-radius: 4px;
+  color: #fafafa;
+  line-height: 2em;
+  margin-top: -.5em;
+  transition: color, .5s;
+}
+/* line 36, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/user_profile.css.scss */
+#accordion .accordion_title:hover {
+  color: #0088cc;
+}
+/* line 40, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/user_profile.css.scss */
+#accordion .accordion_divs {
+  font-size: 1.1em;
+  margin-bottom: 2em;
+}
+
+/* line 46, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/user_profile.css.scss */
+.user_about_section {
+  width: 48%;
+  float: right;
+  margin-top: -.5em;
+}
+/* line 55, /Users/alisa/Desktop/mac_overflow/app/assets/stylesheets/user_profile.css.scss */
+.user_about_section .text_area {
+  width: 100%;
+  height: 20em;
+  padding: .5em;
+  font-size: 1.1em;
+  border: 1px solid #444444;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

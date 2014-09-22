@@ -1,0 +1,17 @@
+<div class="form_container">
+<% if current_user %>
+  <%= link_to questions_url, questions_path %>
+<% else %>
+
+	<%= link_to "Sign Up", "#", remote: true, id:"signup"%>
+  <%= link_to "Log In", "#", remote: true, id:"login"%>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+	  
+	  <div class="forms">
+  		<%= render 'forms' %>
+  	</div>
+  </div>
+<% end %>

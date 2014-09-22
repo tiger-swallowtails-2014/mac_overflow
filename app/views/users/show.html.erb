@@ -1,34 +1,64 @@
-<div class="username"><h1><%= @user.username %></h1></div>
+<section class="user_about_section">
+	<p class="about_title">About:</p>
+	<article class="text_area">
+		<% if @user.about == nil %>
+			Help people know more about you
+		<% else %>
+			<%= @user.about %>
+		<% end %>
+	</article>
+</section>
+
+<div class="username_container">
+	<h1 class="username"><%= @user.username %>
+	<% if current_user != nil && @user == current_user  %>
+		<span class="edit_user_button"><%= link_to 'Edit', edit_user_path(@user) %></span>
+	<% end %>
+	</h1>
+</div>
+
+<div id="accordion">
+
+	<h3 class="accordion_title">QUESTIONS SUBMITTED: <%= @user.questions.size %></h3>
+		<div class="question accordion_divs">
+			<% count = 1 %>
+			<% @user.questions.each do |q| %>
+					<a href="<%= question_url(q) %>"><%= count %>. <strong><%= q.title %></strong></a><br>
+					<%= q.body %><br>
+					<% if current_user != nil && @user == current_user  %>
+						<%= link_to 'Delete', question_path(q), method: :delete %><br>
+					<% end %>
+					<% count += 1 %>
+			<% end %>
+		</div>
+
+	<h3 class="accordion_title">ANSWERS SUBMITTED: <%= @user.answers.size %></h3>
+	  <div class="answer accordion_divs">
+			<% count = 1 %>
+			<% @user.answers.each do |a| %>
+				<%="#{count}. #{a.body} "%><br>
+				<% if current_user != nil && @user == current_user  %>
+					<%= link_to 'Delete', answer_path(a), method: :delete %><br>
+				<% end %>
+				<% count += 1 %>
+			<% end %>
+		</div>
 
 
-<h2>QUESTIONS SUBMITTED</h2>
-<% count = 1 %>
-<% @user.questions.each do |q| %>
-	<div class="question">
-		<%= count %>. <strong><%= q.title %></strong><br>
-		<%= q.body %><br>
-		<% count += 1 %>
-	</div>
-<% end %>
+	<h3 class="accordion_title">COMMENTS SUBMITTED: <%= @user.responses.size %></h3>
+		<div class="comment accordion_divs">
+			<% count = 1 %>
+			<% @user.responses.each do |r| %>
+				<%="#{count}. #{r.body} "%><br>
+				<% if current_user != nil && @user == current_user  %>
+					<%= link_to 'Delete', response_path(r), method: :delete %><br>
+				<% end %>
+				<% count += 1 %>
+			<% end %>
+		</div>
 
-
-<h2>ANSWERS</h2>
-<% count = 1 %>
-<% @user.answers.each do |a| %>
-  <div class="answer">
-		<%="#{count}. #{a.body} "%><br>
-		<% count += 1 %>
-	</div>
-<% end %>
-
-
-
-<h2>COMMENTS</h2>
-<% count = 1 %>
-<% @user.responses.each do |r| %>
-	<div class="comment">
-	<%="#{count}. #{r.body} "%><br>
-	<% count += 1 %>
-	</div>
-<% end %>
+<% if current_user != nil && @user == current_user  %>
+		<span class="edit_user_button"><%= link_to 'Edit Profile', edit_user_path(@user) %></span>
+	<% end %>
+</div>
 
