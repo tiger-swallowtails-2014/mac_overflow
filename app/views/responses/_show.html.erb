@@ -1,6 +1,6 @@
 <p>Response by 
 		<% if response.user  %>
-			<%= link_to response.user.username, user_path(response.user.id)%> 
+			<%= link_to current_user.username, user_path(current_user.id)%> 
 			<% else %>
 			Anonymous
 			<% end %>
