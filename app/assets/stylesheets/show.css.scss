@@ -1,0 +1,38 @@
+$link-font-color: #08C;
+$text-color: #333;
+$font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$offwhitebg: #FAFAFA;
+
+
+body{
+	background-color: $offwhitebg;
+}
+.questions{
+	width: 80%;
+	padding: 5em;
+	margin: 5em auto auto 5em;
+	background-color: white;
+	height: 100%;
+	z-index: 0;
+
+	.topofquestions{
+		text-align: center;
+		font-size: 40px;
+	}
+	.question_container{
+		padding: 2em 1em 2em 1em;
+		z-index: 1;
+	}
+
+
+	a{
+	font-size: 18px;
+		font-weight: normal;
+		text-decoration: none;
+		color: $link-font-color;
+		font-family: $font;
+		padding: 3em;
+		z-index: 1;
+	}
+}
+

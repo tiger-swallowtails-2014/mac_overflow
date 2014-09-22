@@ -1,0 +1,29 @@
+<div class="banner" style="padding-left: 3em; padding-bottom: 1em;"><%= image_tag("lorembanner.png") %></div>
+
+<p style="text-align: center; font-size: 22px;">Duis Aute Irure Dolor in Reprehenderit</p>
+
+<% if current_user %>
+  <div class="new_question_button"> <%= link_to 'Ask a New Question', new_question_path, class: "button" %></div><br><br>
+<% end %>
+Order by:
+<%= link_to "new", {controller: "questions", action: "index", :order => "new"} %> |
+<%= link_to "top voted", {controller: "questions", action: "index", :order => "votesdesc"} %>
+
+<% @questions.each do |question| %>
+<article class="question_container">
+  <p><%= link_to question.title, question_path(question) %><br>
+  answers: <%= question.answers.count %> <span class="question_author"> by <%= link_to question.user.username, user_path(question.user.id)%> <br>
+  <%= question.created_at.strftime("%b %e, %l:%M %p") %></span></p>
+  <p><a class="vote" href="/questions/<%= question.id %>/upvote">☝︎</a>  <a class="vote" href="/questions/<%= question.id %>/downvote">☟</a>  |  Vote Count:  <span class="vote_count"><%= question.votes.size %></span></p>
+
+</article>
+<% end %>
+
+<script>
+var questions = document.getElementsByClassName('question_container');
+	for (var i = 0; i < questions.length; i++){
+		if (i % 2 == 1){
+			questions[i].setAttribute("id","odd")
+		}
+	}
+</script>

@@ -1,0 +1,63 @@
+$head_color: #444;
+$link-font-color: #08C;
+$offwhitebg: #FAFAFA;
+
+.username_container {
+  margin-top: -1.8em;
+  font-size: 1.5em;
+  width: 40%;
+  font-weight: light;
+  p{
+  font-size: 2em;
+  }
+  .edit_user_button {
+    font-size: .2em;
+  }
+}
+
+
+#accordion {
+  width: 48%;
+  margin-bottom: 13em;
+  margin-top: -1em;
+
+  .accordion_title {
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    background-color: $head_color;
+    border-radius: 4px;
+    color: $offwhitebg;
+    line-height: 2em;
+    margin-top: -.5em;
+    transition: color, .5s;
+  }
+
+  .accordion_title:hover {
+    color: $link-font-color;
+  }
+
+  .accordion_divs {
+    font-size: 1.1em;
+    margin-bottom: 2em;
+  }
+}
+
+.user_about_section {
+  width: 48%;
+  float: right;
+  margin-top: -.5em;
+
+  .about_title {
+    // margin-top: -.5em;
+  }
+
+  .text_area {
+    width: 100%;
+    height: 20em;
+    padding: .5em;
+    font-size: 1.1em;
+    border: 1px solid $head_color;
+  }
+}
+
