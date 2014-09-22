@@ -1,26 +1,17 @@
-<h1><%= @question.title %></h1>
-<hr>
-<p><b>Question:</b>  <%= @question.body %></p>
-<hr>
-
-<h3>Answers: <%= @answers.size %></h3>
-<hr>
-
-<% @answers.each do |answer| %>
-<div class="answers_container" id=<%= answer.id %>>
-  <p><img class="vote_arrow" src="http://www.iconsdb.com/icons/download/black/arrow-206-512.gif">
-  	<b>Answer:</b>  <%= answer.body %></p>
-
-  	<div class="responselink"><%= link_to "Respond", new_answer_response_path(@question), remote: true, class: 
-  	"#{answer.id}" %> </div> 
-
-
-  <p>Vote Count:  <%= answer.votes.size %></p>
-  <% answer.responses.each do |response| %>
-  <p><b>Response:</b>  <%= response.body %></p>
-  <% end %>
-</div>
-<hr>
-<% end %>
-
 <%= render 'answer_form' %>
+<div class="questionheader">
+  Question by <%= link_to @question.user.username, user_path(@question.user.id)%>
+  <%= @question.created_at.strftime("%b %e, %l:%M %p") %>
+	<br><strong><%= @question.title %></strong><br>
+	 <%= @question.body %>
+</div>
+
+<div class="answersheader">
+	<h3>Answers: <%= @answers.size %></h3>
+	Order by:
+	<%= link_to "new", {controller: "questions", action: "show", :order => "new"} %> |
+	<%= link_to "top voted", {controller: "questions", action: "show", :order => "votesdesc"} %>
+</div>
+<%= render 'answers' %>
+
+<%= stylesheet_link_tag "app/stylesheets/index.css.scss" %>

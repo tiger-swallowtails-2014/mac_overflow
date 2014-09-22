@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'users#index'
+  root 'questions#index'
 
   resources :users do
     resources :questions, name_prefix: "user_"
@@ -11,11 +11,20 @@ Rails.application.routes.draw do
   end
 
   resources :answers do
-    resources :responses, name_prefix: "answer_"
+    resources :responses, :constraints => { :id => /.*/ }, name_prefix: "answer_"
   end
 
   get '/answers/:id/upvote', to: "answers#upvote", as: "upvote_answer"
   get '/answers/:id/downvote', to: "answers#downvote", as: "downvote_answer"
+  get '/questions/:id/upvote', to: "questions#upvote", as: "upvote_question"
+  get '/questions/:id/downvote', to: "questions#downvote", as: "downvote_question"
 
-  root 'questions#index'
+  # for BCrypt
+  get '/' => 'home#index', as: :home
+  get "/log_in" => "sessions#new"
+  post "/log_in" => "sessions#create"
+  get "/log_out" => "sessions#destroy", as: :log_out
+
+  delete '/reponse/:id' => "responses#destroy", as: :response
+
 end

@@ -1,25 +1,151 @@
-$head_color: #f1f1f1;
-$highlight: #c9302c;
-$font: helvetica;
+$offwhitebg: #FAFAFA;
+$head_color: rgba(0, 0, 0, 0.6);
+$font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$link-font-color: #08C;
+$text-color: #333;
+$highlight: #08C;
+$lighter_color: #f9fafc;
 
 body {
   margin: 0;
   padding: 0;
   font-family: $font;
+  font-weight: 100;
+  background-color: $offwhitebg;
 }
+
+#odd{
+  background-color: #F9F9F9;
+}
+
+a{
+  text-decoration: none;
+  color: $link-font-color;
+  font-family: $font;
+  font-weight: 100;
+}
+
+p{
+  color: $text-color;
+  font-size: 20px;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.new_question_button{
+  float: right;
+}
+.content{
+  width: 80%;
+  padding: 5em;
+  margin: 5em auto;
+  background-color: white;
+  height: 100%;
+  border-radius: 4px;
+  z-index: 0;
+
+  .question_container{
+    padding: 1em 1em 1em 1em;
+    z-index: 1;
+  }
+
+}
+
 
 .layout_header {
   width: 100%;
   height: 3em;
+  font-weight: light;
   background-color: $head_color;
-  border-bottom: 3px solid $highlight;
-  padding-top: .5em;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+
+  .title{
+    font-size: 2em;
+    font-weight: 100;
+    margin-top: 0;
+    text-align: center;
+    padding-left: 6em;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    margin: 2px 0;
+    font-family: $font;
+    transition: color, .5s;
+  }
+
+  .nav_links {
+    margin-top: 1%;
+    float: right;
+    margin-right: 3%;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: $highlight;
+  }
+}
+
+.question_author{
+  float: right;
+  text-align: right;
+  font-family: $font;
+  font-weight: light;
+  font-size: 12px;
+}
+
+.background {
+  margin-top: -2em;
+  width: 100%;
+  height: 51em;
+  background-color: #000;
+  position: fixed;
+  opacity: .9;
+}
+
+.signin_lightbox, .login_lightbox {
+  position: absolute;
+  margin: 13% 30%;
+  padding: 2em;
+  background-color: $lighter_color;
+  width: 30%;
+  height: 20em;
   text-align: center;
 
-  .title {
-    margin: 2px 0;
-    font-family: "Times New Roman"
+  label{
+    display: inline-block;
+    clear: left;
+    width: 250px;
   }
+
+  input {
+    display: inline-block;
+    width: 250px;
+    line-height: 2em;
+    font-size: 16px;
+    font-family: $font;
+    font-weight: 100;
+  }
+
+  p{
+    font-family: $font;
+    font-weight: 100;
+  }
+
+  .button {
+    color:white;
+    text-decoration: none;
+    background-image: linear-gradient(#37AAEA ,#117ED2);
+    box-shadow: inset 0 1px 1px 0 #6FC5F5;
+    padding: 7px 24px;
+    border-radius: 4px;
+  }
+
 }
 
 

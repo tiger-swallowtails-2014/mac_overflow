@@ -1,5 +1,9 @@
+<div class="answerform">
 <%= form_for [@question, @answer] do |f| %>
-  <%= f.label "Add an Answer" %>
-  <%= f.text_area :body %>
-  <%= f.submit %>
+  <%= f.label "Add an Answer" %><br>
+  <%= f.text_area :body , size:"20x8"%><br>
+  <%= f.submit class:"button" %>
 <% end %>
+</div> 
+
+<%= stylesheet_link_tag "app/stylesheets/index.css.scss" %>
